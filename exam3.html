@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primary Computing Interactive Exam</title>
+    <!-- Tailwind CSS for Modern UI/UX -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pyidaungsu:wght@400;700&display=swap');
+        body { font-family: 'Pyidaungsu', sans-serif; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }
+        .step-content { display: none; }
+        .step-content.active { display: block; animation: fadeIn 0.4s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+
+    <div class="bg-white w-full max-w-2xl rounded-2xl shadow-xl overflow-hidden p-8 border border-gray-100">
+        
+        <!-- Header & Progress Bar -->
+        <div class="mb-6">
+            <div class="flex justify-between items-center mb-2">
+                <h1 class="text-xl font-bold text-indigo-700">💻 Primary 3 Computing Exam</h1>
+                <span id="step-indicator" class="text-sm font-semibold text-gray-500">အဆင့် 0 / 4</span>
+            </div>
+            <div class="w-full bg-gray-200 h-2.5 rounded-full overflow-hidden">
+                <div id="progress-bar" class="bg-indigo-600 h-2.5 rounded-full transition-all duration-500" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <!-- Step 0: Student Login -->
+        <div id="step-0" class="step-content active">
+            <h2 class="text-2xl font-bold text-gray-800 mb-2">ကြိုဆိုပါတယ် 👋</h2>
+            <p class="text-gray-600 mb-6">စတင်ဖြေဆိုရန် ကျောင်းသားအမည်နှင့် အတန်းကို ထည့်သွင်းပေးပါ။</p>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-semibold mb-2">ကျောင်းသားအမည်:</label>
+                <input type="text" id="student-name" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:outline-none transition" placeholder="ဥပမာ - မောင်မောင်">
+            </div>
+            <button onclick="startExam()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-xl shadow-lg transition transform active:scale-95">စတင်ဖြေဆိုမည် 🚀</button>
+        </div>
+
+        <!-- Step 1: Multiple Choice -->
+        <div id="step-1" class="step-content">
+            <span class="text-xs font-bold text-indigo-600 uppercase bg-indigo-50 px-3 py-1 rounded-full">မေးခွန်း ၁ (၁ မှတ်)</span>
+            <h3 class="text-lg font-bold text-gray-800 mt-3 mb-4">အောက်ပါတို့အနက် ဒစ်ဂျစ်တယ်ကိရိယာ (Digital Device) ဟုခေါ်ဆိုနိုင်သည်မှာ အဘယ်နည်း။</h3>
+            <div class="space-y-3">
+                <label class="flex items-center p-4 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="q1" value="wrong" class="w-5 h-5 text-indigo-600 mr-3"> ကျောက်တုံး (Stone)</label>
+                <label class="flex items-center p-4 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="q1" value="correct" class="w-5 h-5 text-indigo-600 mr-3"> စမတ်ဖုန်း (Smartphone)</label>
+                <label class="flex items-center p-4 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="q1" value="wrong" class="w-5 h-5 text-indigo-600 mr-3"> သစ်သားပုဆိန် (Wooden axe)</label>
+            </div>
+            <button onclick="nextStep(1)" class="mt-6 w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-xl shadow-lg transition">နောက်သို့ / ဆက်မည် ➡️</button>
+        </div>
+
+        <!-- Step 2: Spam & Phishing Classification -->
+        <div id="step-2" class="step-content">
+            <span class="text-xs font-bold text-indigo-600 uppercase bg-indigo-50 px-3 py-1 rounded-full">မေးခွန်း ၂ (၁ မှတ်)</span>
+            <h3 class="text-lg font-bold text-gray-800 mt-3 mb-4">အသိမိတ်ဆွေမဟုတ်သူထံမှ ပစ္စည်းလာရောက်ရောင်းချသည့် မလိုလားအပ်သော အီးမေးလ်ကို မည်သို့ခေါ်သနည်း။</h3>
+            <div class="space-y-3">
+                <label class="flex items-center p-4 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="q2" value="correct" class="w-5 h-5 text-indigo-600 mr-3"> Spam Email</label>
+                <label class="flex items-center p-4 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="q2" value="wrong" class="w-5 h-5 text-indigo-600 mr-3"> Inbox Email</label>
+                <label class="flex items-center p-4 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="q2" value="wrong" class="w-5 h-5 text-indigo-600 mr-3"> Safe Attachment</label>
+            </div>
+            <button onclick="nextStep(2)" class="mt-6 w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-xl shadow-lg transition">နောက်သို့ / ဆက်မည် ➡️</button>
+        </div>
+
+        <!-- Step 3: Interactive Gmail Simulation -->
+        <div id="step-3" class="step-content">
+            <span class="text-xs font-bold text-indigo-600 uppercase bg-indigo-50 px-3 py-1 rounded-full">မေးခွန်း ၃ - လက်တွေ့အလုပ် (၅ မှတ်)</span>
+            <h3 class="text-lg font-bold text-gray-800 mt-2 mb-1">📧 Gmail Simulator</h3>
+            <p class="text-sm text-gray-500 mb-4">အောက်ပါအချက်အလက်များကို ဖြည့်စွက်ပြီး <b>Send</b> ကို နှိပ်မှသာ အမှတ်မှတ်တမ်းတင်မည်ဖြစ်ပြီး ရှေ့ဆက်သွားနိုင်မည်။</p>
+            
+            <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 space-y-3">
+                <div>
+                    <label class="block text-xs font-bold text-gray-600">To (Receiver):</label>
+                    <input type="text" id="mail-to" value="teacher@explorer.com" readonly class="w-full px-3 py-2 bg-gray-100 border border-gray-300 rounded-lg text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-gray-600">Subject:</label>
+                    <input type="text" id="mail-subject" placeholder="ခေါင်းစဉ်ရေးပါ" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-gray-600">Greeting & Body:</label>
+                    <textarea id="mail-body" rows="2" placeholder="မင်္ဂလာပါဆရာ၊ တောတွင်းခရီးစဉ်အကြောင်း..." class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none"></textarea>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-gray-600">Attachment:</label>
+                    <input type="file" id="mail-attachment" class="w-full text-xs text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-gray-600">Signature (Closing):</label>
+                    <input type="text" id="mail-signature" placeholder="သင့်နာမည်" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                </div>
+                <button onclick="sendEmail()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 rounded-lg shadow transition flex items-center justify-center space-x-2">
+                    <span>📨 Send (ပေးပို့မည်)</span>
+                </button>
+            </div>
+            
+            <div id="email-alert" class="text-sm font-semibold mt-2 text-center"></div>
+            
+            <button id="btn-after-send" style="display:none;" onclick="nextStep(3)" class="mt-4 w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-xl shadow-lg transition">ရလဒ်ကြည့်ရန် ဆက်မည် ➡️</button>
+        </div>
+
+        <!-- Step 4: Result & Auto Submit Screen -->
+        <div id="step-4" class="step-content text-center py-6">
+            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">🎉</div>
+            <h2 class="text-2xl font-bold text-gray-800 mb-1">ဖြေဆိုပြီးစီးပါပြီ!</h2>
+            <p class="text-gray-600 mb-4" id="student-greeting-text"></p>
+            
+            <div class="bg-indigo-50 p-6 rounded-2xl border border-indigo-100 mb-6 inline-block w-full">
+                <span class="text-sm text-indigo-600 font-semibold uppercase">စုစုပေါင်းရမှတ်</span>
+                <div id="final-score-text" class="text-4xl font-extrabold text-indigo-700 mt-1">0 / 7</div>
+            </div>
+
+            <p id="submission-status" class="text-sm text-gray-500 mb-4">ဆရာ့ဆီသို့ အီးမေးလ် ပို့ဆောင်နေပါသည်...</p>
+            <button onclick="location.reload()" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2.5 px-6 rounded-xl transition">အစမှ ပြန်စရန် 🔄</button>
+        </div>
+
+    </div>
+
+    <script>
+        // ======= Google Apps Script Web App URL ထည့်ရန်နေရာ =======
+        const SCRIPT_URL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+
+        let score = 0;
+        let emailSent = false;
+        let studentName = "";
+
+        function updateProgress(step) {
+            const progressPercentages = [0, 25, 50, 75, 100];
+            document.getElementById("progress-bar").style.width = progressPercentages[step] + "%";
+            document.getElementById("step-indicator.innerText") = `အဆင့် ${step} / 4`;
+        }
+
+        function startExam() {
+            const nameInput = document.getElementById("student-name").value.trim();
+            if(!nameInput) {
+                alert("ကျေးဇူးပြု၍ နာမည်ထည့်ပါ။");
+                return;
+            }
+            studentName = nameInput;
+            switchStep(0, 1);
+        }
+
+        function nextStep(currentStep) {
+            if(currentStep === 1) {
+                const q1 = document.querySelector('input[name="q1"]:checked');
+                if(q1 && q1.value === "correct") score += 1;
+                switchStep(1, 2);
+            } else if(currentStep === 2) {
+                const q2 = document.querySelector('input[name="q2"]:checked');
+                if(q2 && q2.value === "correct") score += 1;
+                switchStep(2, 3);
+            } else if(currentStep === 3) {
+                if(!emailSent) {
+                    alert("⚠️ ကျေးဇူးပြု၍ အရင်ဆုံး Send ခလုတ်ကို နှိပ်ပြီး အီးမေးလ်ပို့ပါ။");
+                    return;
+                }
+                switchStep(3, 4);
+                
+                // Final UI Update
+                document.getElementById("student-greeting-text").innerText = `${studentName} ရဲ့ ဖြေဆိုမှု မှတ်တမ်း`;
+                document.getElementById("final-score-text").innerText = `${score} / 7 မှတ်`;
+                
+                // Auto Send to Teacher via Google Apps Script
+                submitExamToTeacher();
+            }
+        }
+
+        function switchStep(from, to) {
+            document.getElementById(`step-${from}`).classList.remove("active");
+            document.getElementById(`step-${to}`).classList.add("active");
+            
+            const percentages = [0, 25, 50, 75, 100];
+            document.getElementById("progress-bar").style.width = percentages[to] + "%";
+            document.getElementById("step-indicator").innerText = `အဆင့် ${to} / 4`;
+        }
+
+        function sendEmail() {
+            const subject = document.getElementById("mail-subject").value.trim();
+            const body = document.getElementById("mail-body").value.trim();
+            const signature = document.getElementById("mail-signature").value.trim();
+            const alertBox = document.getElementById("email-alert");
+
+            if(!subject || !body || !signature) {
+                alertBox.className = "text-sm font-semibold mt-2 text-center text-red-500";
+                alertBox.innerText = "❌ Subject, Body နှင့် Signature အားလုံး ဖြည့်စွက်ပါ။";
+                return;
+            }
+
+            score += 5; // Email parts + Send action = 5 marks
+            emailSent = true;
+            alertBox.className = "text-sm font-semibold mt-2 text-center text-emerald-600";
+            alertBox.innerText = "✅ အီးမေးလ် အောင်မြင်စွာ ပို့ပြီးပါပြီ!";
+            document.getElementById("btn-after-send").style.display = "block";
+        }
+
+        function submitExamToTeacher() {
+            const statusText = document.getElementById("submission-status");
+            const examData = {
+                name: studentName,
+                score: score + " / 7 မှတ်",
+                details: "Multiple Choice, Spam Quiz နှင့် Gmail လက်တွေ့လုပ်ဆောင်ချက်များ အောင်မြင်စွာ ပြီးဆုံးပါပြီ။"
+            };
+
+            if(SCRIPT_URL.includes("YOUR_GOOGLE_APPS_SCRIPT")) {
+                statusText.innerText = "⚠️ Google Apps Script URL မထည့်ရသေးပါ။ (Backend မချိတ်ရသေးပါ)";
+                return;
+            }
+
+            fetch(SCRIPT_URL, {
+                method: "POST",
+                mode: "no-cors",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(examData)
+            })
+            .then(() => {
+                statusText.innerText = "✅ အဖြေလွှာကို ဆရာ့ဆီသို့ အလိုအလျောက် ပို့ပြီးပါပြီ။";
+                statusText.classList.add("text-emerald-600", "font-bold");
+            })
+            .catch(() => {
+                statusText.innerText = "❌ အချက်အလက် ပို့ဆောင်ရာတွင် အမှားရှိပါသည်။";
+                statusText.classList.add("text-red-500");
+            });
+        }
+    </script>
+</body>
+</html>
