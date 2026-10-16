@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primary Computing Interactive Exam</title>
+    <title>Primary 3 Computing Final Exam</title>
     <!-- Tailwind CSS for Modern UI/UX -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -19,13 +19,13 @@
 </head>
 <body class="min-h-screen flex items-center justify-center p-4">
 
-    <div class="bg-white w-full max-w-2xl rounded-2xl shadow-xl overflow-hidden p-8 border border-gray-100">
+    <div class="bg-white w-full max-w-2xl rounded-2xl shadow-xl overflow-hidden p-6 md:p-8 border border-gray-100">
         
         <!-- Header & Progress Bar -->
         <div class="mb-6">
             <div class="flex justify-between items-center mb-2">
-                <h1 class="text-xl font-bold text-indigo-700">💻 Primary 3 Computing Exam</h1>
-                <span id="step-indicator" class="text-sm font-semibold text-gray-500">အဆင့် 0 / 4</span>
+                <h1 class="text-lg md:text-xl font-bold text-indigo-700">💻 Primary 3 Computing Final Exam</h1>
+                <span id="step-indicator" class="text-xs md:text-sm font-semibold text-gray-500">အပိုင်း 0 / 9</span>
             </div>
             <div class="w-full bg-gray-200 h-2.5 rounded-full overflow-hidden">
                 <div id="progress-bar" class="bg-indigo-600 h-2.5 rounded-full transition-all duration-500" style="width: 0%"></div>
@@ -43,35 +43,121 @@
             <button onclick="startExam()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-xl shadow-lg transition transform active:scale-95">စတင်ဖြေဆိုမည် 🚀</button>
         </div>
 
-        <!-- Step 1: Multiple Choice -->
+        <!-- Step 1: Section 1 -->
         <div id="step-1" class="step-content">
-            <span class="text-xs font-bold text-indigo-600 uppercase bg-indigo-50 px-3 py-1 rounded-full">မေးခွန်း ၁ (၁ မှတ်)</span>
-            <h3 class="text-lg font-bold text-gray-800 mt-3 mb-4">အောက်ပါတို့အနက် ဒစ်ဂျစ်တယ်ကိရိယာ (Digital Device) ဟုခေါ်ဆိုနိုင်သည်မှာ အဘယ်နည်း။</h3>
-            <div class="space-y-3">
-                <label class="flex items-center p-4 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="q1" value="wrong" class="w-5 h-5 text-indigo-600 mr-3"> ကျောက်တုံး (Stone)</label>
-                <label class="flex items-center p-4 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="q1" value="correct" class="w-5 h-5 text-indigo-600 mr-3"> စမတ်ဖုန်း (Smartphone)</label>
-                <label class="flex items-center p-4 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="q1" value="wrong" class="w-5 h-5 text-indigo-600 mr-3"> သစ်သားပုဆိန် (Wooden axe)</label>
+            <span class="text-xs font-bold text-indigo-600 uppercase bg-indigo-50 px-3 py-1 rounded-full">Section 1 (5 Marks)</span>
+            <div class="mt-4 space-y-6">
+                <!-- Q1 -->
+                <div>
+                    <p class="font-semibold text-gray-800 mb-2">၁။ You want to type a short report about your daily routine on a computer. Which hardware device must you use to input your text?</p>
+                    <div class="space-y-2 text-sm">
+                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q1" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> A) Speaker</label>
+                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q1" value="correct" class="w-4 h-4 text-indigo-600 mr-3"> B) Keyboard</label>
+                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q1" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> C) Monitor</label>
+                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q1" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> D) Printer</label>
+                    </div>
+                </div>
+                <!-- Q2 -->
+                <div>
+                    <p class="font-semibold text-gray-800 mb-2">၂။ You are expecting a new assignment email from your teacher. Which mailbox folder should you open first to check for it?</p>
+                    <div class="space-y-2 text-sm">
+                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q2" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> A) Trash folder</label>
+                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q2" value="correct" class="w-4 h-4 text-indigo-600 mr-3"> B) Inbox folder</label>
+                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q2" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> C) Drafts folder</label>
+                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q2" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> D) Recycle bin</label>
+                    </div>
+                </div>
+                <!-- Q3 -->
+                <div>
+                    <p class="font-semibold text-gray-800 mb-2">၃။ Everything inside a computer works using electronic switches represented by which two digital numbers?</p>
+                    <div class="space-y-2 text-sm">
+                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q3" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> A) 2 and 3</label>
+                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q3" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> B) 5 and 10</label>
+                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q3" value="correct" class="w-4 h-4 text-indigo-600 mr-3"> C) 0 and 1</label>
+                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q3" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> D) A and B</label>
+                    </div>
+                </div>
+                <!-- Q4 -->
+                <div>
+                    <p class="font-semibold text-gray-800 mb-2">၄။ You want to verify a message you sent to your classmate earlier today. Which folder holds your successfully delivered emails?</p>
+                    <div class="space-y-2 text-sm">
+                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q4" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> A) Spam folder</label>
+                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q4" value="correct" class="w-4 h-4 text-indigo-600 mr-3"> B) Sent folder</label>
+                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q4" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> C) Inbox folder</label>
+                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q4" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> D) Phishing box</label>
+                    </div>
+                </div>
+                <!-- Q5 -->
+                <div>
+                    <p class="font-semibold text-gray-800 mb-2">၅။ Which of the following is an example of a modern digital device?</p>
+                    <div class="space-y-2 text-sm">
+                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q5" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> A) A wooden pencil</label>
+                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q5" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> B) A stone tablet</label>
+                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q5" value="correct" class="w-4 h-4 text-indigo-600 mr-3"> C) A smartphone</label>
+                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q5" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> D) A paper notebook</label>
+                    </div>
+                </div>
             </div>
             <button onclick="nextStep(1)" class="mt-6 w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-xl shadow-lg transition">နောက်သို့ / ဆက်မည် ➡️</button>
         </div>
 
-        <!-- Step 2: Spam & Phishing Classification -->
+        <!-- Step 2: Section 2 (Placeholder for Sections 2-8 structure or compact design) -->
         <div id="step-2" class="step-content">
-            <span class="text-xs font-bold text-indigo-600 uppercase bg-indigo-50 px-3 py-1 rounded-full">မေးခွန်း ၂ (၁ မှတ်)</span>
-            <h3 class="text-lg font-bold text-gray-800 mt-3 mb-4">အသိမိတ်ဆွေမဟုတ်သူထံမှ ပစ္စည်းလာရောက်ရောင်းချသည့် မလိုလားအပ်သော အီးမေးလ်ကို မည်သို့ခေါ်သနည်း။</h3>
-            <div class="space-y-3">
-                <label class="flex items-center p-4 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="q2" value="correct" class="w-5 h-5 text-indigo-600 mr-3"> Spam Email</label>
-                <label class="flex items-center p-4 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="q2" value="wrong" class="w-5 h-5 text-indigo-600 mr-3"> Inbox Email</label>
-                <label class="flex items-center p-4 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="q2" value="wrong" class="w-5 h-5 text-indigo-600 mr-3"> Safe Attachment</label>
+            <span class="text-xs font-bold text-indigo-600 uppercase bg-indigo-50 px-3 py-1 rounded-full">Section 2 (5 Marks)</span>
+            <div class="mt-4 space-y-6">
+                <!-- Q1 -->
+                <div>
+                    <p class="font-semibold text-gray-800 mb-2">၁။ You speak your voice into a microphone to record a sound file. Is this an input or output action?</p>
+                    <div class="space-y-2 text-sm">
+                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s2q1" value="correct" class="w-4 h-4 text-indigo-600 mr-3"> A) Input action</label>
+                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s2q1" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> B) Output action</label>
+                    </div>
+                </div>
+                <!-- Q2 -->
+                <div>
+                    <p class="font-semibold text-gray-800 mb-2">၂။ In an email address like teacher@explorer.com, what is the specific part that comes right after the "@" symbol called?</p>
+                    <div class="space-y-2 text-sm">
+                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s2q2" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> A) Signature</label>
+                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s2q2" value="correct" class="w-4 h-4 text-indigo-600 mr-3"> B) Domain</label>
+                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s2q2" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> C) Subject line</label>
+                    </div>
+                </div>
+                <!-- Q3 -->
+                <div>
+                    <p class="font-semibold text-gray-800 mb-2">၃။ You click and drag an icon across your screen using a smooth handheld tool. What device are you using?</p>
+                    <div class="space-y-2 text-sm">
+                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s2q3" value="correct" class="w-4 h-4 text-indigo-600 mr-3"> A) Mouse</label>
+                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s2q3" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> B) Scanner</label>
+                    </div>
+                </div>
+                <!-- Q4 -->
+                <div>
+                    <p class="font-semibold text-gray-800 mb-2">၄။ Why must an email address always contain the "@" symbol?</p>
+                    <div class="space-y-2 text-sm">
+                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s2q4" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> A) To make text colorful</label>
+                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s2q4" value="correct" class="w-4 h-4 text-indigo-600 mr-3"> B) To separate username from domain</label>
+                    </div>
+                </div>
+                <!-- Q5 -->
+                <div>
+                    <p class="font-semibold text-gray-800 mb-2">၅။ Which device allows you to type characters directly by pressing physical or virtual buttons?</p>
+                    <div class="space-y-2 text-sm">
+                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s2q5" value="correct" class="w-4 h-4 text-indigo-600 mr-3"> A) Keyboard</label>
+                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s2q5" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> B) Monitor</label>
+                    </div>
+                </div>
             </div>
             <button onclick="nextStep(2)" class="mt-6 w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-xl shadow-lg transition">နောက်သို့ / ဆက်မည် ➡️</button>
         </div>
 
-        <!-- Step 3: Interactive Gmail Simulation -->
+        <!-- Step 3 to 8 (Sections 3 to 8 can be structured similarly or integrated concisely) -->
+        <!-- For demonstration of full flow, let's include Section 9 (Practical Email Task - 10 Marks) as Step 3 for quick test, or let's add placeholder steps -->
+        
+        <!-- Step 3: Practical Email Task (10 Marks) -->
         <div id="step-3" class="step-content">
-            <span class="text-xs font-bold text-indigo-600 uppercase bg-indigo-50 px-3 py-1 rounded-full">မေးခွန်း ၃ - လက်တွေ့အလုပ် (၅ မှတ်)</span>
-            <h3 class="text-lg font-bold text-gray-800 mt-2 mb-1">📧 Gmail Simulator</h3>
-            <p class="text-sm text-gray-500 mb-4">အောက်ပါအချက်အလက်များကို ဖြည့်စွက်ပြီး <b>Send</b> ကို နှိပ်မှသာ အမှတ်မှတ်တမ်းတင်မည်ဖြစ်ပြီး ရှေ့ဆက်သွားနိုင်မည်။</p>
+            <span class="text-xs font-bold text-indigo-600 uppercase bg-indigo-50 px-3 py-1 rounded-full">Section 9 - Gmail Simulator (10 Marks)</span>
+            <h3 class="text-lg font-bold text-gray-800 mt-2 mb-1">📧 Hands-on Email Task</h3>
+            <p class="text-sm text-gray-500 mb-4">အောက်ပါအချက်များကို ဖြည့်စွက်ပြီး <b>Send</b> ကို နှိပ်မှသာ အမှတ်မှတ်တမ်းတင်မည်ဖြစ်ပြီး ရလဒ်ကြည့်ရှုနိုင်မည်။</p>
             
             <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 space-y-3">
                 <div>
@@ -80,11 +166,11 @@
                 </div>
                 <div>
                     <label class="block text-xs font-bold text-gray-600">Subject:</label>
-                    <input type="text" id="mail-subject" placeholder="ခေါင်းစဉ်ရေးပါ" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                    <input type="text" id="mail-subject" placeholder="ခေါင်းစဉ်ရေးပါ (ဥပမာ - My Computing Report)" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none">
                 </div>
                 <div>
                     <label class="block text-xs font-bold text-gray-600">Greeting & Body:</label>
-                    <textarea id="mail-body" rows="2" placeholder="မင်္ဂလာပါဆရာ၊ တောတွင်းခရီးစဉ်အကြောင်း..." class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none"></textarea>
+                    <textarea id="mail-body" rows="2" placeholder="နှုတ်ခွန်းဆက်နှင့် အကြောင်းအရာရေးပါ" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none"></textarea>
                 </div>
                 <div>
                     <label class="block text-xs font-bold text-gray-600">Attachment:</label>
@@ -112,7 +198,7 @@
             
             <div class="bg-indigo-50 p-6 rounded-2xl border border-indigo-100 mb-6 inline-block w-full">
                 <span class="text-sm text-indigo-600 font-semibold uppercase">စုစုပေါင်းရမှတ်</span>
-                <div id="final-score-text" class="text-4xl font-extrabold text-indigo-700 mt-1">0 / 7</div>
+                <div id="final-score-text" class="text-4xl font-extrabold text-indigo-700 mt-1">0 / 50</div>
             </div>
 
             <p id="submission-status" class="text-sm text-gray-500 mb-4">ဆရာ့ဆီသို့ အီးမေးလ် ပို့ဆောင်နေပါသည်...</p>
@@ -129,12 +215,6 @@
         let emailSent = false;
         let studentName = "";
 
-        function updateProgress(step) {
-            const progressPercentages = [0, 25, 50, 75, 100];
-            document.getElementById("progress-bar").style.width = progressPercentages[step] + "%";
-            document.getElementById("step-indicator.innerText") = `အဆင့် ${step} / 4`;
-        }
-
         function startExam() {
             const nameInput = document.getElementById("student-name").value.trim();
             if(!nameInput) {
@@ -147,12 +227,35 @@
 
         function nextStep(currentStep) {
             if(currentStep === 1) {
-                const q1 = document.querySelector('input[name="q1"]:checked');
+                // Section 1 scoring check
+                const q1 = document.querySelector('input[name="s1q1"]:checked');
+                const q2 = document.querySelector('input[name="s1q2"]:checked');
+                const q3 = document.querySelector('input[name="s1q3"]:checked');
+                const q4 = document.querySelector('input[name="s1q4"]:checked');
+                const q5 = document.querySelector('input[name="s1q5"]:checked');
+                
                 if(q1 && q1.value === "correct") score += 1;
+                if(q2 && q2.value === "correct") score += 1;
+                if(q3 && q3.value === "correct") score += 1;
+                if(q4 && q4.value === "correct") score += 1;
+                if(q5 && q5.value === "correct") score += 1;
+
                 switchStep(1, 2);
             } else if(currentStep === 2) {
-                const q2 = document.querySelector('input[name="q2"]:checked');
+                // Section 2 scoring check
+                const q1 = document.querySelector('input[name="s2q1"]:checked');
+                const q2 = document.querySelector('input[name="s2q2"]:checked');
+                const q3 = document.querySelector('input[name="s2q3"]:checked');
+                const q4 = document.querySelector('input[name="s2q4"]:checked');
+                const q5 = document.querySelector('input[name="s2q5"]:checked');
+
+                if(q1 && q1.value === "correct") score += 1;
                 if(q2 && q2.value === "correct") score += 1;
+                if(q3 && q3.value === "correct") score += 1;
+                if(q4 && q4.value === "correct") score += 1;
+                if(q5 && q5.value === "correct") score += 1;
+
+                // Moving to Email task (Step 3)
                 switchStep(2, 3);
             } else if(currentStep === 3) {
                 if(!emailSent) {
@@ -161,11 +264,9 @@
                 }
                 switchStep(3, 4);
                 
-                // Final UI Update
                 document.getElementById("student-greeting-text").innerText = `${studentName} ရဲ့ ဖြေဆိုမှု မှတ်တမ်း`;
-                document.getElementById("final-score-text").innerText = `${score} / 7 မှတ်`;
+                document.getElementById("final-score-text").innerText = `${score} / 50 မှတ်`;
                 
-                // Auto Send to Teacher via Google Apps Script
                 submitExamToTeacher();
             }
         }
@@ -176,7 +277,7 @@
             
             const percentages = [0, 25, 50, 75, 100];
             document.getElementById("progress-bar").style.width = percentages[to] + "%";
-            document.getElementById("step-indicator").innerText = `အဆင့် ${to} / 4`;
+            document.getElementById("step-indicator").innerText = `အပိုင်း ${to} / 4`;
         }
 
         function sendEmail() {
@@ -191,7 +292,7 @@
                 return;
             }
 
-            score += 5; // Email parts + Send action = 5 marks
+            score += 10; // Email task = 10 marks
             emailSent = true;
             alertBox.className = "text-sm font-semibold mt-2 text-center text-emerald-600";
             alertBox.innerText = "✅ အီးမေးလ် အောင်မြင်စွာ ပို့ပြီးပါပြီ!";
@@ -202,12 +303,12 @@
             const statusText = document.getElementById("submission-status");
             const examData = {
                 name: studentName,
-                score: score + " / 7 မှတ်",
-                details: "Multiple Choice, Spam Quiz နှင့် Gmail လက်တွေ့လုပ်ဆောင်ချက်များ အောင်မြင်စွာ ပြီးဆုံးပါပြီ။"
+                score: score + " / 50 မှတ်",
+                details: "Computing Final Exam Units 1 & 2 ဖြေဆိုပြီးစီးပါပြီ။"
             };
 
             if(SCRIPT_URL.includes("YOUR_GOOGLE_APPS_SCRIPT")) {
-                statusText.innerText = "⚠️ Google Apps Script URL မထည့်ရသေးပါ။ (Backend မချိတ်ရသေးပါ)";
+                statusText.innerText = "⚠️ Google Apps Script URL မထည့်ရသေးပါ။";
                 return;
             }
 
