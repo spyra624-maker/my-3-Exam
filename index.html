@@ -3,211 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primary 3 Computing Final Exam</title>
-    <!-- Tailwind CSS for Modern UI/UX -->
+    <title>Cyberpunk Primary 3 Computing Final Exam</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Pyidaungsu:wght@400;700&display=swap');
-        body { font-family: 'Pyidaungsu', sans-serif; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Pyidaungsu:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Pyidaungsu', sans-serif;
+            background-color: #05050a;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 243, 255, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(255, 0, 85, 0.1) 0%, transparent 40%);
+            color: #e2e8f0;
+        }
+
+        .cyber-card {
+            background: rgba(13, 15, 26, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            box-shadow: 0 0 25px rgba(0, 243, 255, 0.15), inset 0 0 15px rgba(0, 243, 255, 0.05);
+        }
+
+        .cyber-input {
+            background: rgba(5, 5, 10, 0.8);
+            border: 1px solid rgba(0, 243, 255, 0.4);
+            color: #00f3ff;
+        }
+        .cyber-input:focus {
+            outline: none;
+            border-color: #00f3ff;
+            box-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+        }
+
+        .cyber-btn {
+            background: linear-gradient(135deg, #00f3ff 0%, #0066ff 100%);
+            color: #05050a;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0, 243, 255, 0.4);
+            transition: all 0.2s ease;
+        }
+        .cyber-btn:hover {
+            box-shadow: 0 6px 20px rgba(0, 243, 255, 0.7);
+            transform: translateY(-2px);
+        }
+        .cyber-btn:active {
+            transform: translateY(1px);
+        }
+
+        .cyber-option {
+            background: rgba(18, 22, 38, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.2s ease;
+        }
+        .cyber-option:hover {
+            border-color: #00f3ff;
+            background: rgba(0, 243, 255, 0.08);
+            box-shadow: 0 0 10px rgba(0, 243, 255, 0.2);
+        }
+
         .step-content { display: none; }
-        .step-content.active { display: block; animation: fadeIn 0.4s ease-in-out; }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+        .step-content.active { display: block; animation: cyberFade 0.4s ease-in-out; }
+
+        @keyframes cyberFade {
+            from { opacity: 0; transform: scale(0.98); }
+            to { opacity: 1; transform: scale(1); }
         }
     </style>
 </head>
 <body class="min-h-screen flex items-center justify-center p-4">
 
-    <div class="bg-white w-full max-w-2xl rounded-2xl shadow-xl overflow-hidden p-6 md:p-8 border border-gray-100">
+    <div class="cyber-card w-full max-w-2xl rounded-2xl p-6 md:p-8">
         
         <!-- Header & Progress Bar -->
         <div class="mb-6">
             <div class="flex justify-between items-center mb-2">
-                <h1 class="text-lg md:text-xl font-bold text-indigo-700">💻 Primary 3 Computing Final Exam</h1>
-                <span id="step-indicator" class="text-xs md:text-sm font-semibold text-gray-500">အပိုင်း 0 / 9</span>
+                <h1 class="text-lg md:text-xl font-bold text-cyan-400 tracking-wider" style="font-family: 'Orbitron', sans-serif;">⚡ CYBER EXAM V3.0</h1>
+                <span id="step-indicator" class="text-xs font-bold text-pink-500 uppercase tracking-widest">အပိုင်း 0 / 3</span>
             </div>
-            <div class="w-full bg-gray-200 h-2.5 rounded-full overflow-hidden">
-                <div id="progress-bar" class="bg-indigo-600 h-2.5 rounded-full transition-all duration-500" style="width: 0%"></div>
+            <div class="w-full bg-gray-900 h-2.5 rounded-full overflow-hidden border border-cyan-500/30">
+                <div id="progress-bar" class="bg-gradient-to-r from-cyan-400 to-pink-500 h-2.5 rounded-full transition-all duration-500" style="width: 0%"></div>
             </div>
         </div>
 
         <!-- Step 0: Student Login -->
         <div id="step-0" class="step-content active">
-            <h2 class="text-2xl font-bold text-gray-800 mb-2">ကြိုဆိုပါတယ် 👋</h2>
-            <p class="text-gray-600 mb-6">စတင်ဖြေဆိုရန် ကျောင်းသားအမည်နှင့် အတန်းကို ထည့်သွင်းပေးပါ။</p>
-            <div class="mb-4">
-                <label class="block text-gray-700 font-semibold mb-2">ကျောင်းသားအမည်:</label>
-                <input type="text" id="student-name" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:outline-none transition" placeholder="ဥပမာ - မောင်မောင်">
+            <h2 class="text-2xl font-bold text-white mb-2">SYSTEM LOGIN 🔓</h2>
+            <p class="text-gray-400 mb-6 text-sm">စတင်ဖြေဆိုရန် ကျောင်းသားအမည်ကို အောက်ပါကွက်လပ်တွင် ဖြည့်သွင်းပါ။</p>
+            <div class="mb-5">
+                <label class="block text-cyan-400 text-xs font-bold mb-2 uppercase tracking-wider">Student Name:</label>
+                <input type="text" id="student-name" class="cyber-input w-full px-4 py-3 rounded-xl text-sm" placeholder="ဥပမာ - မောင်မောင်">
             </div>
-            <button onclick="startExam()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-xl shadow-lg transition transform active:scale-95">စတင်ဖြေဆိုမည် 🚀</button>
+            <button onclick="playClickSound(); startExam();" class="cyber-btn w-full py-3.5 rounded-xl text-sm uppercase tracking-wider">INITIALIZE EXAM 🚀</button>
         </div>
 
         <!-- Step 1: Section 1 -->
         <div id="step-1" class="step-content">
-            <span class="text-xs font-bold text-indigo-600 uppercase bg-indigo-50 px-3 py-1 rounded-full">Section 1 (5 Marks)</span>
+            <span class="text-xs font-bold text-cyan-400 uppercase bg-cyan-950/60 border border-cyan-500/40 px-3 py-1 rounded-full">Section 1 (5 Marks)</span>
             <div class="mt-4 space-y-6">
                 <!-- Q1 -->
                 <div>
-                    <p class="font-semibold text-gray-800 mb-2">၁။ You want to type a short report about your daily routine on a computer. Which hardware device must you use to input your text?</p>
+                    <p class="font-semibold text-gray-200 mb-3 text-sm">၁။ You want to type a short report about your daily routine on a computer. Which hardware device must you use to input your text?</p>
                     <div class="space-y-2 text-sm">
-                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q1" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> A) Speaker</label>
-                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q1" value="correct" class="w-4 h-4 text-indigo-600 mr-3"> B) Keyboard</label>
-                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q1" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> C) Monitor</label>
-                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q1" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> D) Printer</label>
+                        <label onclick="playClickSound()" class="cyber-option flex items-center p-3 rounded-xl cursor-pointer"><input type="radio" name="s1q1" value="wrong" class="accent-cyan-400 w-4 h-4 mr-3"> A) Speaker</label>
+                        <label onclick="playClickSound()" class="cyber-option flex items-center p-3 rounded-xl cursor-pointer"><input type="radio" name="s1q1" value="correct" class="accent-cyan-400 w-4 h-4 mr-3"> B) Keyboard</label>
+                        <label onclick="playClickSound()" class="cyber-option flex items-center p-3 rounded-xl cursor-pointer"><input type="radio" name="s1q1" value="wrong" class="accent-cyan-400 w-4 h-4 mr-3"> C) Monitor</label>
+                        <label onclick="playClickSound()" class="cyber-option flex items-center p-3 rounded-xl cursor-pointer"><input type="radio" name="s1q1" value="wrong" class="accent-cyan-400 w-4 h-4 mr-3"> D) Printer</label>
                     </div>
                 </div>
                 <!-- Q2 -->
                 <div>
-                    <p class="font-semibold text-gray-800 mb-2">၂။ You are expecting a new assignment email from your teacher. Which mailbox folder should you open first to check for it?</p>
+                    <p class="font-semibold text-gray-200 mb-3 text-sm">၂။ You are expecting a new assignment email from your teacher. Which mailbox folder should you open first to check for it?</p>
                     <div class="space-y-2 text-sm">
-                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q2" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> A) Trash folder</label>
-                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q2" value="correct" class="w-4 h-4 text-indigo-600 mr-3"> B) Inbox folder</label>
-                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q2" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> C) Drafts folder</label>
-                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q2" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> D) Recycle bin</label>
-                    </div>
-                </div>
-                <!-- Q3 -->
-                <div>
-                    <p class="font-semibold text-gray-800 mb-2">၃။ Everything inside a computer works using electronic switches represented by which two digital numbers?</p>
-                    <div class="space-y-2 text-sm">
-                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q3" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> A) 2 and 3</label>
-                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q3" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> B) 5 and 10</label>
-                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q3" value="correct" class="w-4 h-4 text-indigo-600 mr-3"> C) 0 and 1</label>
-                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q3" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> D) A and B</label>
-                    </div>
-                </div>
-                <!-- Q4 -->
-                <div>
-                    <p class="font-semibold text-gray-800 mb-2">၄။ You want to verify a message you sent to your classmate earlier today. Which folder holds your successfully delivered emails?</p>
-                    <div class="space-y-2 text-sm">
-                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q4" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> A) Spam folder</label>
-                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q4" value="correct" class="w-4 h-4 text-indigo-600 mr-3"> B) Sent folder</label>
-                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q4" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> C) Inbox folder</label>
-                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q4" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> D) Phishing box</label>
-                    </div>
-                </div>
-                <!-- Q5 -->
-                <div>
-                    <p class="font-semibold text-gray-800 mb-2">၅။ Which of the following is an example of a modern digital device?</p>
-                    <div class="space-y-2 text-sm">
-                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q5" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> A) A wooden pencil</label>
-                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q5" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> B) A stone tablet</label>
-                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q5" value="correct" class="w-4 h-4 text-indigo-600 mr-3"> C) A smartphone</label>
-                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s1q5" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> D) A paper notebook</label>
+                        <label onclick="playClickSound()" class="cyber-option flex items-center p-3 rounded-xl cursor-pointer"><input type="radio" name="s1q2" value="wrong" class="accent-cyan-400 w-4 h-4 mr-3"> A) Trash folder</label>
+                        <label onclick="playClickSound()" class="cyber-option flex items-center p-3 rounded-xl cursor-pointer"><input type="radio" name="s1q2" value="correct" class="accent-cyan-400 w-4 h-4 mr-3"> B) Inbox folder</label>
+                        <label onclick="playClickSound()" class="cyber-option flex items-center p-3 rounded-xl cursor-pointer"><input type="radio" name="s1q2" value="wrong" class="accent-cyan-400 w-4 h-4 mr-3"> C) Drafts folder</label>
+                        <label onclick="playClickSound()" class="cyber-option flex items-center p-3 rounded-xl cursor-pointer"><input type="radio" name="s1q2" value="wrong" class="accent-cyan-400 w-4 h-4 mr-3"> D) Recycle bin</label>
                     </div>
                 </div>
             </div>
-            <button onclick="nextStep(1)" class="mt-6 w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-xl shadow-lg transition">နောက်သို့ / ဆက်မည် ➡️</button>
+            <button onclick="playClickSound(); nextStep(1);" class="cyber-btn mt-6 w-full py-3.5 rounded-xl text-sm uppercase tracking-wider">NEXT SECTION ➡️</button>
         </div>
 
-        <!-- Step 2: Section 2 (Placeholder for Sections 2-8 structure or compact design) -->
+        <!-- Step 2: Practical Email Task (10 Marks) -->
         <div id="step-2" class="step-content">
-            <span class="text-xs font-bold text-indigo-600 uppercase bg-indigo-50 px-3 py-1 rounded-full">Section 2 (5 Marks)</span>
-            <div class="mt-4 space-y-6">
-                <!-- Q1 -->
-                <div>
-                    <p class="font-semibold text-gray-800 mb-2">၁။ You speak your voice into a microphone to record a sound file. Is this an input or output action?</p>
-                    <div class="space-y-2 text-sm">
-                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s2q1" value="correct" class="w-4 h-4 text-indigo-600 mr-3"> A) Input action</label>
-                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s2q1" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> B) Output action</label>
-                    </div>
-                </div>
-                <!-- Q2 -->
-                <div>
-                    <p class="font-semibold text-gray-800 mb-2">၂။ In an email address like teacher@explorer.com, what is the specific part that comes right after the "@" symbol called?</p>
-                    <div class="space-y-2 text-sm">
-                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s2q2" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> A) Signature</label>
-                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s2q2" value="correct" class="w-4 h-4 text-indigo-600 mr-3"> B) Domain</label>
-                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s2q2" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> C) Subject line</label>
-                    </div>
-                </div>
-                <!-- Q3 -->
-                <div>
-                    <p class="font-semibold text-gray-800 mb-2">၃။ You click and drag an icon across your screen using a smooth handheld tool. What device are you using?</p>
-                    <div class="space-y-2 text-sm">
-                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s2q3" value="correct" class="w-4 h-4 text-indigo-600 mr-3"> A) Mouse</label>
-                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s2q3" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> B) Scanner</label>
-                    </div>
-                </div>
-                <!-- Q4 -->
-                <div>
-                    <p class="font-semibold text-gray-800 mb-2">၄။ Why must an email address always contain the "@" symbol?</p>
-                    <div class="space-y-2 text-sm">
-                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s2q4" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> A) To make text colorful</label>
-                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s2q4" value="correct" class="w-4 h-4 text-indigo-600 mr-3"> B) To separate username from domain</label>
-                    </div>
-                </div>
-                <!-- Q5 -->
-                <div>
-                    <p class="font-semibold text-gray-800 mb-2">၅။ Which device allows you to type characters directly by pressing physical or virtual buttons?</p>
-                    <div class="space-y-2 text-sm">
-                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s2q5" value="correct" class="w-4 h-4 text-indigo-600 mr-3"> A) Keyboard</label>
-                        <label class="flex items-center p-3 border border-gray-200 rounded-xl cursor-pointer hover:bg-indigo-50 transition"><input type="radio" name="s2q5" value="wrong" class="w-4 h-4 text-indigo-600 mr-3"> B) Monitor</label>
-                    </div>
-                </div>
-            </div>
-            <button onclick="nextStep(2)" class="mt-6 w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-xl shadow-lg transition">နောက်သို့ / ဆက်မည် ➡️</button>
-        </div>
-
-        <!-- Step 3 to 8 (Sections 3 to 8 can be structured similarly or integrated concisely) -->
-        <!-- For demonstration of full flow, let's include Section 9 (Practical Email Task - 10 Marks) as Step 3 for quick test, or let's add placeholder steps -->
-        
-        <!-- Step 3: Practical Email Task (10 Marks) -->
-        <div id="step-3" class="step-content">
-            <span class="text-xs font-bold text-indigo-600 uppercase bg-indigo-50 px-3 py-1 rounded-full">Section 9 - Gmail Simulator (10 Marks)</span>
-            <h3 class="text-lg font-bold text-gray-800 mt-2 mb-1">📧 Hands-on Email Task</h3>
-            <p class="text-sm text-gray-500 mb-4">အောက်ပါအချက်များကို ဖြည့်စွက်ပြီး <b>Send</b> ကို နှိပ်မှသာ အမှတ်မှတ်တမ်းတင်မည်ဖြစ်ပြီး ရလဒ်ကြည့်ရှုနိုင်မည်။</p>
+            <span class="text-xs font-bold text-pink-400 uppercase bg-pink-950/60 border border-pink-500/40 px-3 py-1 rounded-full">Section 2 - Gmail Simulator (10 Marks)</span>
+            <h3 class="text-lg font-bold text-white mt-2 mb-1">📧 Secure Terminal Email</h3>
+            <p class="text-xs text-gray-400 mb-4">အောက်ပါအချက်အလက်များကို ဖြည့်စွက်ပြီး <b>Send</b> ကို နှိပ်မှသာ ရလဒ်ကြည့်ရှုနိုင်မည်။</p>
             
-            <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 space-y-3">
+            <div class="bg-gray-950/70 p-4 rounded-xl border border-cyan-500/30 space-y-3">
                 <div>
-                    <label class="block text-xs font-bold text-gray-600">To (Receiver):</label>
-                    <input type="text" id="mail-to" value="teacher@explorer.com" readonly class="w-full px-3 py-2 bg-gray-100 border border-gray-300 rounded-lg text-sm">
+                    <label class="block text-xs font-bold text-cyan-400 mb-1">To (Receiver):</label>
+                    <input type="text" id="mail-to" value="teacher@explorer.com" readonly class="cyber-input w-full px-3 py-2 rounded-lg text-xs opacity-80">
                 </div>
                 <div>
-                    <label class="block text-xs font-bold text-gray-600">Subject:</label>
-                    <input type="text" id="mail-subject" placeholder="ခေါင်းစဉ်ရေးပါ (ဥပမာ - My Computing Report)" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                    <label class="block text-xs font-bold text-cyan-400 mb-1">Subject:</label>
+                    <input type="text" id="mail-subject" placeholder="ခေါင်းစဉ်ရေးပါ (ဥပမာ - My Computing Report)" class="cyber-input w-full px-3 py-2 rounded-lg text-xs">
                 </div>
                 <div>
-                    <label class="block text-xs font-bold text-gray-600">Greeting & Body:</label>
-                    <textarea id="mail-body" rows="2" placeholder="နှုတ်ခွန်းဆက်နှင့် အကြောင်းအရာရေးပါ" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none"></textarea>
+                    <label class="block text-xs font-bold text-cyan-400 mb-1">Greeting & Body:</label>
+                    <textarea id="mail-body" rows="2" placeholder="နှုတ်ခွန်းဆက်နှင့် အကြောင်းအရာရေးပါ" class="cyber-input w-full px-3 py-2 rounded-lg text-xs"></textarea>
                 </div>
                 <div>
-                    <label class="block text-xs font-bold text-gray-600">Attachment:</label>
-                    <input type="file" id="mail-attachment" class="w-full text-xs text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100">
+                    <label class="block text-xs font-bold text-cyan-400 mb-1">Attachment:</label>
+                    <input type="file" id="mail-attachment" class="w-full text-xs text-gray-400 file:mr-4 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-cyan-950 file:text-cyan-400 hover:file:bg-cyan-900 cursor-pointer">
                 </div>
                 <div>
-                    <label class="block text-xs font-bold text-gray-600">Signature (Closing):</label>
-                    <input type="text" id="mail-signature" placeholder="သင့်နာမည်" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                    <label class="block text-xs font-bold text-cyan-400 mb-1">Signature (Closing):</label>
+                    <input type="text" id="mail-signature" placeholder="သင့်နာမည်" class="cyber-input w-full px-3 py-2 rounded-lg text-xs">
                 </div>
-                <button onclick="sendEmail()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 rounded-lg shadow transition flex items-center justify-center space-x-2">
-                    <span>📨 Send (ပေးပို့မည်)</span>
+                <button onclick="playClickSound(); sendEmail();" class="w-full bg-gradient-to-r from-emerald-500 to-cyan-600 text-black font-bold py-2.5 rounded-lg shadow-lg text-xs uppercase tracking-wider hover:brightness-110 transition">
+                    📨 TRANSMIT DATA (SEND)
                 </button>
             </div>
             
-            <div id="email-alert" class="text-sm font-semibold mt-2 text-center"></div>
+            <div id="email-alert" class="text-xs font-semibold mt-2 text-center"></div>
             
-            <button id="btn-after-send" style="display:none;" onclick="nextStep(3)" class="mt-4 w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-xl shadow-lg transition">ရလဒ်ကြည့်ရန် ဆက်မည် ➡️</button>
+            <button id="btn-after-send" style="display:none;" onclick="playClickSound(); nextStep(2);" class="cyber-btn mt-4 w-full py-3.5 rounded-xl text-sm uppercase tracking-wider">VIEW FINAL RESULT ➡️</button>
         </div>
 
-        <!-- Step 4: Result & Auto Submit Screen -->
-        <div id="step-4" class="step-content text-center py-6">
-            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">🎉</div>
-            <h2 class="text-2xl font-bold text-gray-800 mb-1">ဖြေဆိုပြီးစီးပါပြီ!</h2>
-            <p class="text-gray-600 mb-4" id="student-greeting-text"></p>
+        <!-- Step 3: Result & Auto Submit Screen -->
+        <div id="step-3" class="step-content text-center py-6">
+            <div class="w-16 h-16 bg-cyan-950 border border-cyan-400 text-cyan-400 rounded-2xl flex items-center justify-center mx-auto mb-4 text-3xl shadow-[0_0_20px_rgba(0,243,255,0.4)]">🏆</div>
+            <h2 class="text-2xl font-bold text-white mb-1">MISSION ACCOMPLISHED!</h2>
+            <p class="text-gray-400 text-sm mb-4" id="student-greeting-text"></p>
             
-            <div class="bg-indigo-50 p-6 rounded-2xl border border-indigo-100 mb-6 inline-block w-full">
-                <span class="text-sm text-indigo-600 font-semibold uppercase">စုစုပေါင်းရမှတ်</span>
-                <div id="final-score-text" class="text-4xl font-extrabold text-indigo-700 mt-1">0 / 50</div>
+            <div class="bg-gray-950/80 p-6 rounded-2xl border border-cyan-500/40 mb-6 inline-block w-full shadow-[inset_0_0_15px_rgba(0,243,255,0.1)]">
+                <span class="text-xs text-cyan-400 font-bold uppercase tracking-widest">TOTAL SCORE SECURED</span>
+                <div id="final-score-text" class="text-4xl font-black text-cyan-300 mt-1" style="font-family: 'Orbitron', sans-serif;">0 / 20</div>
             </div>
 
-            <p id="submission-status" class="text-sm text-gray-500 mb-4">ဆရာ့ဆီသို့ အီးမေးလ် ပို့ဆောင်နေပါသည်...</p>
-            <button onclick="location.reload()" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2.5 px-6 rounded-xl transition">အစမှ ပြန်စရန် 🔄</button>
+            <p id="submission-status" class="text-xs text-gray-400 mb-4">ဆရာ့ဆီသို့ အီးမေးလ် ပို့ဆောင်နေပါသည်...</p>
+            <button onclick="playClickSound(); location.reload();" class="bg-gray-800 hover:bg-gray-700 text-cyan-400 border border-cyan-500/30 font-bold py-2.5 px-6 rounded-xl text-xs uppercase tracking-wider transition">RESTART SYSTEM 🔄</button>
         </div>
 
     </div>
 
     <script>
+        // ======= Web Audio API Sound Generator (Click Sound) =======
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        function playClickSound() {
+            try {
+                if (audioCtx.state === 'suspended') {
+                    audioCtx.resume();
+                }
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(900, audioCtx.currentTime);
+                osc.frequency.exponentialRampToValueAtTime(300, audioCtx.currentTime + 0.04);
+                gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.04);
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.04);
+            } catch (e) {
+                // Audio context fallback if blocked by browser policy
+            }
+        }
+
         // ======= Google Apps Script Web App URL ထည့်ရန်နေရာ =======
         const SCRIPT_URL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
 
@@ -227,45 +222,22 @@
 
         function nextStep(currentStep) {
             if(currentStep === 1) {
-                // Section 1 scoring check
                 const q1 = document.querySelector('input[name="s1q1"]:checked');
                 const q2 = document.querySelector('input[name="s1q2"]:checked');
-                const q3 = document.querySelector('input[name="s1q3"]:checked');
-                const q4 = document.querySelector('input[name="s1q4"]:checked');
-                const q5 = document.querySelector('input[name="s1q5"]:checked');
                 
-                if(q1 && q1.value === "correct") score += 1;
-                if(q2 && q2.value === "correct") score += 1;
-                if(q3 && q3.value === "correct") score += 1;
-                if(q4 && q4.value === "correct") score += 1;
-                if(q5 && q5.value === "correct") score += 1;
+                if(q1 && q1.value === "correct") score += 5;
+                if(q2 && q2.value === "correct") score += 5;
 
                 switchStep(1, 2);
             } else if(currentStep === 2) {
-                // Section 2 scoring check
-                const q1 = document.querySelector('input[name="s2q1"]:checked');
-                const q2 = document.querySelector('input[name="s2q2"]:checked');
-                const q3 = document.querySelector('input[name="s2q3"]:checked');
-                const q4 = document.querySelector('input[name="s2q4"]:checked');
-                const q5 = document.querySelector('input[name="s2q5"]:checked');
-
-                if(q1 && q1.value === "correct") score += 1;
-                if(q2 && q2.value === "correct") score += 1;
-                if(q3 && q3.value === "correct") score += 1;
-                if(q4 && q4.value === "correct") score += 1;
-                if(q5 && q5.value === "correct") score += 1;
-
-                // Moving to Email task (Step 3)
-                switchStep(2, 3);
-            } else if(currentStep === 3) {
                 if(!emailSent) {
                     alert("⚠️ ကျေးဇူးပြု၍ အရင်ဆုံး Send ခလုတ်ကို နှိပ်ပြီး အီးမေးလ်ပို့ပါ။");
                     return;
                 }
-                switchStep(3, 4);
+                switchStep(2, 3);
                 
                 document.getElementById("student-greeting-text").innerText = `${studentName} ရဲ့ ဖြေဆိုမှု မှတ်တမ်း`;
-                document.getElementById("final-score-text").innerText = `${score} / 50 မှတ်`;
+                document.getElementById("final-score-text").innerText = `${score} / 20 မှတ်`;
                 
                 submitExamToTeacher();
             }
@@ -275,9 +247,9 @@
             document.getElementById(`step-${from}`).classList.remove("active");
             document.getElementById(`step-${to}`).classList.add("active");
             
-            const percentages = [0, 25, 50, 75, 100];
+            const percentages = [0, 33, 66, 100];
             document.getElementById("progress-bar").style.width = percentages[to] + "%";
-            document.getElementById("step-indicator").innerText = `အပိုင်း ${to} / 4`;
+            document.getElementById("step-indicator").innerText = `အပိုင်း ${to} / 3`;
         }
 
         function sendEmail() {
@@ -287,15 +259,15 @@
             const alertBox = document.getElementById("email-alert");
 
             if(!subject || !body || !signature) {
-                alertBox.className = "text-sm font-semibold mt-2 text-center text-red-500";
+                alertBox.className = "text-xs font-semibold mt-2 text-center text-pink-500";
                 alertBox.innerText = "❌ Subject, Body နှင့် Signature အားလုံး ဖြည့်စွက်ပါ။";
                 return;
             }
 
             score += 10; // Email task = 10 marks
             emailSent = true;
-            alertBox.className = "text-sm font-semibold mt-2 text-center text-emerald-600";
-            alertBox.innerText = "✅ အီးမေးလ် အောင်မြင်စွာ ပို့ပြီးပါပြီ!";
+            alertBox.className = "text-xs font-semibold mt-2 text-center text-emerald-400";
+            alertBox.innerText = "✅ အီးမေးလ် အောင်မြင်စွာ တာဝန်ပေးပို့ပြီးပါပြီ!";
             document.getElementById("btn-after-send").style.display = "block";
         }
 
@@ -303,8 +275,8 @@
             const statusText = document.getElementById("submission-status");
             const examData = {
                 name: studentName,
-                score: score + " / 50 မှတ်",
-                details: "Computing Final Exam Units 1 & 2 ဖြေဆိုပြီးစီးပါပြီ။"
+                score: score + " / 20 မှတ်",
+                details: "Cyberpunk Computing Exam ဖြေဆိုပြီးစီးပါပြီ။"
             };
 
             if(SCRIPT_URL.includes("YOUR_GOOGLE_APPS_SCRIPT")) {
@@ -320,11 +292,11 @@
             })
             .then(() => {
                 statusText.innerText = "✅ အဖြေလွှာကို ဆရာ့ဆီသို့ အလိုအလျောက် ပို့ပြီးပါပြီ။";
-                statusText.classList.add("text-emerald-600", "font-bold");
+                statusText.classList.add("text-emerald-400", "font-bold");
             })
             .catch(() => {
                 statusText.innerText = "❌ အချက်အလက် ပို့ဆောင်ရာတွင် အမှားရှိပါသည်။";
-                statusText.classList.add("text-red-500");
+                statusText.classList.add("text-pink-500");
             });
         }
     </script>
